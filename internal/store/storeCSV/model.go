@@ -1,8 +1,12 @@
 package storeCSV
 
-type storeCSV struct {
+//StoreCSV структура нашей базы для работы с CSV файлами
+type StoreCSV struct {
+	path    string
+	columns map[string]int
 }
 
+//Item модель нашего обьекта в базе
 type Item struct {
 	Ser_numb                      string `json:"ser_numb" `
 	Id                            string `json:"id"`

@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-//каждый запрос проходит через данный обработчик и выводится его метод, URI и IP
+//Logging - каждый запрос проходит через данный обработчик и выводится его метод, URI и IP
 func Logging(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
 		next.ServeHTTP(w, req)
